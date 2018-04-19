@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 
 import java.util.HashMap;
+import java.util.stream.*;
 
 import org.junit.Assert;
 import org.junit.Test;

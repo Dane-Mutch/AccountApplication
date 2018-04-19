@@ -1,5 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.*;
+import java.util.function.Predicate;
 
 public class Service {
 
@@ -25,16 +27,10 @@ public class Service {
 	}
 		
 	public int firstNameCounter(String firstName) {
-		int counter = 0;
-		for (Integer key : accounts.keySet()) {
-		    Account value = accounts.get(key);
-		    if (value.getFirstName().equals(firstName)) {
-		    	counter = counter + 1;
-		    }
-		}
-		    return counter;
+		return (int) accounts.values().stream().filter(entry -> entry.getFirstName().equals(firstName)).count();
 	}
 }
+	
 		
 	
 
