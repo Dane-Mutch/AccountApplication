@@ -1,5 +1,4 @@
 import static org.junit.Assert.*;
-import java.util.HashMap;
 
 import java.util.HashMap;
 
@@ -7,7 +6,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class AccountTest {
-
+	
+	
+	
 	Service service = new Service();
 
 	Account Account1 = new Account("Nidhesh", "Pillai", "1001");
@@ -37,15 +38,12 @@ public class AccountTest {
 		
 	}
 	@Test
-	public void firstNameCounterTest(String firstName) {
+	public void firstNameCounterTest() {
 		service.addAccount(Account1);
 		service.addAccount(Account2);
 		service.addAccount(Account3);
 		int expectedValue1 = 1;
-		int actualValue1 = Service.firstNameCounter("Callum");
-		Assert.assertEquals(expectedValue1, expectedValue1);
-		
-	
-		
-	}
+		int actualValue1 = service.firstNameCounter("Callum");
+		Assert.assertEquals(expectedValue1, actualValue1);
+		}
 }
