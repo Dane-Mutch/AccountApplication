@@ -34,5 +34,18 @@ public class AccountTest {
 		JSon gson = new JSon();
 		String jsonTest = gson.getJSon(service.getAccountMap());
 		assertEquals(jsonTest, output);
+		
+	}
+	@Test
+	public void firstNameCounterTest(String firstName) {
+		service.addAccount(Account1);
+		service.addAccount(Account2);
+		service.addAccount(Account3);
+		int expectedValue1 = 1;
+		int actualValue1 = Service.firstNameCounter("Callum");
+		Assert.assertEquals(expectedValue1, expectedValue1);
+		
+	
+		
 	}
 }
